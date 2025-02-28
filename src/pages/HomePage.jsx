@@ -4,11 +4,13 @@ import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 import RoundCard from "../components/RoundCard";
 import NavBar from "../components/NavBar";
 import Heading from "../components/Heading";
+import PillBar from "../components/PillBar";
 
 import callIcon from "../assets/icons/call.png";
 import emailIcon from "../assets/icons/email.png";
 import AcadIcon from "../assets/icons/acad.png";
 import HeaderIcon from "../assets/icons/headerImage.png";
+import CourseCard from "../components/CourseCard";
 
 const HomePage = () => {
   const scrollRef = useRef(null);
@@ -111,8 +113,8 @@ const HomePage = () => {
       </div>
 
       <br />
-{/* //study PROGRAMS */}
-    <Heading type="study" />
+      {/* //study PROGRAMS */}
+      <Heading type="study" />
 
       <div className="flex flex-col items-center p-6 relative">
         <div
@@ -120,12 +122,13 @@ const HomePage = () => {
           className="flex gap-6 overflow-x-auto w-full max-w-screen-xl px-4 scrollbar-hide"
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
         >
+          {/* You can add cardList and map it to get all the card components */}
           {[...Array(10)].map((_, index) => (
             <Card
               key={index}
               title={`Exam ${index + 1}`}
               content="This is an Exam."
-              image="https://plus.unsplash.com/premium_photo-1680807869086-e08309acfb24?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              image="https://images.unsplash.com/vector-1739128047892-15cd29b3754a?q=80&w=2360&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             />
           ))}
         </div>
@@ -147,8 +150,20 @@ const HomePage = () => {
           </button>
         </div>
       </div>
+
+      {/* Other courses */}
+      <div class="relative w-full h-[750px]">
+        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover bg-center"></div>
+
+        <div class="absolute inset-0 bg-[#b4eca8] opacity-60"></div>
+
+        <div class="relative z-10 flex flex-col items-center my-15 h-full text-white text-2xl font-bold mt-10">
+          <Heading type="articles" />
+          <CourseCard />
+          <PillBar/>
+        </div>
+      </div>
     </article>
   );
 };
-
 export default HomePage;

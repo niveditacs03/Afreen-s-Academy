@@ -24,13 +24,21 @@ const Heading = (Heading ) => {
 
       if (Heading.type === "study") {
         return (
-          <div className="text-center py-6 bg-gradient-to-br from-white to-[#f9f9ff] rounded-lg">
+          <div className="text-center py-6  rounded-lg mt-10">
             <RoundCard type="study" title="STUDY PROGRAMS" />
             <h1 className="text-4xl font-bold my-6 text-[#333]">PROGRAMS FOR GENERAL PRACTITIONERS</h1>
             <DividerWithCircle />
           </div>
         );
       }
-
+      if(Heading.type === "articles"){  
+        return (
+          <div className="text-center py-6 rounded-lg mt-5">
+            <RoundCard type="study" title="OTHER COURSES" />
+            <h1 className="text-4xl font-bold my-6 text-black">A BROAD SELECTION OF COURSES</h1>
+            <DividerWithCircle />
+          </div>
+        );
+      }
 };
 export default Heading;
