@@ -52,7 +52,7 @@ const RoundCard = (RoundCard) => {
     return (
       <div className="flex justify-center items-center w-full">
         <div className="bg-[#ffeccc] text-[#fc9404] w-55 h-10 flex items-center justify-center rounded-full">
-            <span className="text-xs font-semibold ml-1">{RoundCard.title}</span>
+          <span className="text-xs font-semibold ml-1">{RoundCard.title}</span>
         </div>
       </div>
     );
@@ -67,6 +67,16 @@ const RoundCard = (RoundCard) => {
         >
           <img src={startIcon} alt="start" className="w-8 h-8 pr-1" />
           <span className="text-xs font-medium">{RoundCard.title}</span>
+        </div>
+      </div>
+    );
+  }
+
+  if (RoundCard.type === "doctor") {
+    return (
+      <div className="flex w-full">
+        <div className="bg-[#ffeccc] text-[#fc9404] w-55 h-10 flex items-center justify-center rounded-full">
+          <span className="text-xs font-semibold ml-1">{RoundCard.title}</span>
         </div>
       </div>
     );

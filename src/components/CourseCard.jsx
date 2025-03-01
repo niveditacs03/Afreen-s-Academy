@@ -40,7 +40,7 @@ const CourseCard = () => {
       {/* Course Container */}
       <div className="flex flex-col md:flex-row gap-10 rounded-full">
         {/* Left side - Image Card */}
-        <div className="bg-white rounded-lg overflow-hidden shadow-lg p-2 w-[60%] h-[40%] rounded-full">
+        <div className="bg-white rounded-lg overflow-hidden shadow-lg p-2 w-[35%] rounded-full">
           <img
             src={activeCourse.image}
             alt={activeCourse.title}
@@ -66,7 +66,7 @@ const CourseCard = () => {
               </button>
             ))}
           </div>
-           
+
           {/* Course Content */}
           <div className="bg-transparent p-6 rounded-lg">
             <h3 className="text-[28px] text-black font-normal">

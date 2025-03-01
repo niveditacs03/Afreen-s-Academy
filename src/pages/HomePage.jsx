@@ -1,28 +1,23 @@
 import React, { useRef } from "react";
 import Card from "../components/Card";
-import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 import RoundCard from "../components/RoundCard";
 import NavBar from "../components/NavBar";
 import Heading from "../components/Heading";
 import PillBar from "../components/PillBar";
+import TwinButton from "../components/TwinButton";
+import SubscriptionCard from "../components/SubscriptionCard";
+import DoctorCard from "../components/DoctorCard";
 
 import callIcon from "../assets/icons/call.png";
 import emailIcon from "../assets/icons/email.png";
-import AcadIcon from "../assets/icons/acad.png";
-import HeaderIcon from "../assets/icons/headerImage.png";
+import AcadIcon from "../assets/images/acad.png";
+import HeaderIcon from "../assets/images/headerImage.png";
 import CourseCard from "../components/CourseCard";
+import BackgroundImage from "../assets/images/background.jpg";
 
 const HomePage = () => {
   const scrollRef = useRef(null);
-
-  const scroll = (direction) => {
-    if (scrollRef.current) {
-      scrollRef.current.scrollBy({
-        left: direction === "left" ? -300 : 300, // Adjust scroll distance
-        behavior: "smooth",
-      });
-    }
-  };
+  const doctorScrollRef = useRef(null); // New ref for doctor section
 
   return (
     <article>
@@ -133,37 +128,52 @@ const HomePage = () => {
           ))}
         </div>
 
-        {/* Scroll Buttons */}
-        <div className="flex gap-4 mt-4">
-          <button
-            onClick={() => scroll("left")}
-            className="bg-gray-300 text-black w-12 h-12 flex items-center justify-center rounded-full shadow-md hover:bg-blue-800 hover:text-white"
-          >
-            <ArrowOutwardIcon className="!w-6 !h-6 transform rotate-[-135deg]" />
-          </button>
-
-          <button
-            onClick={() => scroll("right")}
-            className="bg-gray-300 text-black w-12 h-12 flex items-center justify-center rounded-full shadow-md hover:bg-blue-800 hover:text-white"
-          >
-            <ArrowOutwardIcon className="!w-6 !h-6 transform rotate-[45deg]" />
-          </button>
-        </div>
+        {/* Using the new TwinButton component */}
+        <TwinButton scrollRef={scrollRef} scrollDistance={300} />
       </div>
 
       {/* Other courses */}
-      <div class="relative w-full h-[750px]">
-        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1524758631624-e2822e304c36?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover bg-center"></div>
+      <div className="relative w-full h-[750px]">
+        <img
+          src={BackgroundImage}
+          alt="background"
+          className="absolute inset-0 w-full h-full"
+        />
 
-        <div class="absolute inset-0 bg-[#b4eca8] opacity-60"></div>
+        <div className="absolute inset-0 bg-[#b4eca8] opacity-60"></div>
 
-        <div class="relative z-10 flex flex-col items-center my-15 h-full text-white text-2xl font-bold mt-10">
+        <div className="relative z-10 flex flex-col items-center my-15 h-full text-white text-2xl font-bold mt-10">
           <Heading type="articles" />
           <CourseCard />
-          <PillBar/>
+          <PillBar type="course" />
         </div>
       </div>
+
+      {/* subscription */}
+      <div id="subscription">
+        <Heading type="subscription" />
+        <div className="flex items-center justify-center h-screen bg-gray-200">
+          <SubscriptionCard type="subscription" />
+        </div>
+
+        {/* Doctor section with its own scroll controls */}
+        <div>
+          <div className="flex items-center">
+            <div className="align-left ml-20">
+              <Heading type="doctor" />
+            </div>
+            <div className="align-right ml-230 mt-40">
+              <TwinButton scrollRef={doctorScrollRef} scrollDistance={300} />
+            </div>
+          </div>
+          <DoctorCard containerRef={doctorScrollRef} />
+        </div>
+      </div>
+
+
+
     </article>
   );
 };
+
 export default HomePage;

@@ -40,5 +40,22 @@ const Heading = (Heading ) => {
           </div>
         );
       }
+      if(Heading.type === "subscription"){  
+        return (
+          <div className="text-center py-6 rounded-lg mt-30">
+            <RoundCard type="study" title="SUBSCRIPTION" />
+            <h1 className="text-4xl font-bold my-6 text-black">HOW TO SUBSCRIBE</h1>
+            <DividerWithCircle />
+          </div>
+        );
+      }
+      if(Heading.type === "doctor"){  
+        return (
+          <div className="py-6 rounded-lg mt-30">
+            <RoundCard type="doctor" title="OUR TEAM" />
+            <h1 className="text-4xl font-bold my-6 text-black">MEET OUR DOCTORS</h1>
+          </div>
+        );
+      }
 };
 export default Heading;
