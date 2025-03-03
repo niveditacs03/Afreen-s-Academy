@@ -44,6 +44,13 @@ const HEADING_CONFIGS = {
     showDivider: true,
     cardType: "study",
     className: "text-center py-6 rounded-lg mt-10"
+  },
+  review: {
+    title: "TESTIMONIALS",
+    heading: "WHAT DOCTORS SAY ABOUT US",
+    showDivider: true ,
+    cardType: "study",
+    className: "text-center py-6 rounded-lg"
   }
 };
 

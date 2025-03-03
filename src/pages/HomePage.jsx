@@ -12,7 +12,8 @@ import DoctorCard from "../components/DoctorCard";
 import CourseCard from "../components/CourseCard";
 import CourseFeatures from "../components/CourseFeatures";
 import PlanCards from "../components/PlanCard";
-
+import ReviewCard from "../components/ReviewCard";
+import ReachOut from "../components/reachOut";
 // Assets
 import callIcon from "../assets/icons/call.png";
 import emailIcon from "../assets/icons/email.png";
@@ -168,20 +169,36 @@ const PlanSection = () => (
 );
 
 const CouponSection = () => (
-  <div id="coupon">
-    <div className="flex items-center justify-center mt-10">
-      <img src={CouponIcon} alt="coupon" className="w-[60px] h-[50px]" />
-      <h2>COUPON CODE APPLIED TO ALL</h2>
-      <button className="bg-orange-500 text-white px-4 py-2 rounded-full ml-5">
-        APPLY
-      </button>
-    </div>
-    <div>
-      <p className="flex items-center justify-center text-blue-900 text-semibold text-center">
-        Have a referal code?
-      </p>
+  <div className="flex justify-center items-center min-h-screen -mt-60">
+    <div id="coupon" className="shadow-md w-[500px] flex flex-col items-center justify-center">
+      <div className="flex items-center justify-center mt-7 w-auto">
+        <img src={CouponIcon} alt="coupon" className="w-[60px] h-[50px]" />
+        <h2>COUPON CODE APPLIED TO ALL</h2>
+        <button className="bg-orange-400 text-white px-4 py-2 rounded-full ml-5 hover:bg-orange-600">
+          APPLY
+        </button>
+      </div>
+      <div>
+        <p className="flex items-center justify-center text-blue-900 text-semibold text-center">
+          Have a referral code?
+        </p>
+      </div>
     </div>
   </div>
+);
+
+
+const ReviewSection = () => (
+  <div>
+    <Heading type="review" />
+    <ReviewCard/>
+  </div>
+);
+
+const ReachOutSection =() => (
+ <div>
+   <ReachOut/>
+ </div>
 );
 // Main component
 const HomePage = () => {
@@ -205,6 +222,8 @@ const HomePage = () => {
       <FeaturesSection />
       <PlanSection />
       <CouponSection />
+      <ReviewSection />
+      <ReachOutSection />
     </article>
   );
 };

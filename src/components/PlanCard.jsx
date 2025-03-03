@@ -45,16 +45,16 @@ const PlanCards = () => {
         {plans.map((plan, index) => (
           <div
             key={index}
-            className="p-6 rounded-xl shadow-md w-80 bg-[#E1FAFF] text-black transition-all duration-300 hover:scale-110 hover:bg-[#12141D] hover:text-white group"
+            className="p-6 rounded-xl shadow-md  w-auto max-w-sm bg-[#E1FAFF] text-black transition-all duration-400 hover:scale-110 hover:bg-[#12141D] group cursor-pointer"
           >
-            <p className={`font-semibold ${plan.textColor} text-[#FF9100] group-hover:text-white`}>{plan.type}</p>
+            <p className={`font-semibold  text-[#FF9100]`}>{plan.type}</p>
             <h2 className="text-2xl font-bold group-hover:text-white">{plan.title}</h2>
-            <p className="mt-1 mb-4 text-sm font-medium group-hover:text-white">{plan.description}</p>
+            <p className="mt-1 mb-4 text-sm font-small group-hover:text-white">{plan.description}</p>
             <div className="h-0.25 w-auto bg-gray-500 rounded-full mb-3"></div>
             <ul className="mb-4 space-y-2">
               {plan.features.map((feature, i) => (
                 <li key={i} className="flex items-center space-x-2 group-hover:text-white">
-                  <span className="text-green-500 group-hover:text-white">✅</span>
+                  <span className="text-green-500 group-hover:text-white -mt-1">✅</span>
                   <span>{feature}</span>
                 </li>
               ))}
