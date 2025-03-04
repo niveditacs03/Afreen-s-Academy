@@ -28,15 +28,15 @@ const ReachOut = () => {
           </div>
           
           {/* Connect Button - Rounded pill style */}
-          <button className="flex items-center justify-center bg-[#7CCCAA] hover:bg-green-500 text-white font-medium rounded-full px-8 py-3 transition-all shadow-md mt-4 w-[220px] h-[60px]">
-            <img src={ConnectIcon} alt="Chat Icon" className="w-6 h-6 mr-2" />
+          <button className="flex items-center justify-center bg-[#7CCCAA] hover:bg-green-500 text-white font-medium rounded-full px-8 py-3 transition-all shadow-md mt-4 w-[220px] h-[60px] cursor-pointer">
+            <img src={ConnectIcon} alt="Chat Icon" className="w-9 h-9 mr-2" />
             Connect With Us
           </button>
         </div>
       </div>
       
       {/* Green curved element at bottom left */}
-      <div className="absolute -bottom-12 -left-10 w-30 h-30 bg-[#B0F0A5] rounded-bl-full "></div>
+      <div className="absolute -bottom-12 -left-10 w-30 h-30 bg-[#B0F0A5] rounded-bl-full"></div>
     </div>
   );
 };

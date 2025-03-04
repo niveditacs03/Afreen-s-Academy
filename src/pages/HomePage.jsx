@@ -14,6 +14,7 @@ import CourseFeatures from "../components/CourseFeatures";
 import PlanCards from "../components/PlanCard";
 import ReviewCard from "../components/ReviewCard";
 import ReachOut from "../components/reachOut";
+import FooterBar from "../components/Footer";
 // Assets
 import callIcon from "../assets/icons/call.png";
 import emailIcon from "../assets/icons/email.png";
@@ -174,7 +175,7 @@ const CouponSection = () => (
       <div className="flex items-center justify-center mt-7 w-auto">
         <img src={CouponIcon} alt="coupon" className="w-[60px] h-[50px]" />
         <h2>COUPON CODE APPLIED TO ALL</h2>
-        <button className="bg-orange-400 text-white px-4 py-2 rounded-full ml-5 hover:bg-orange-600">
+        <button className="bg-orange-400 text-white px-4 py-2 rounded-full ml-5 hover:bg-orange-600 cursor-pointer">
           APPLY
         </button>
       </div>
@@ -200,6 +201,12 @@ const ReachOutSection =() => (
    <ReachOut/>
  </div>
 );
+
+const FooterSection = () => (
+  <div>
+    <FooterBar />
+  </div>
+);
 // Main component
 const HomePage = () => {
   const coursesScrollRef = useRef(null);
@@ -224,6 +231,7 @@ const HomePage = () => {
       <CouponSection />
       <ReviewSection />
       <ReachOutSection />
+      <FooterSection />
     </article>
   );
 };
