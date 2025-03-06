@@ -15,6 +15,8 @@ import emailIcon from "../assets/icons/email.png";
 import AcadIcon from "../assets/images/acad.png";
 import LogoIcon from "../assets/images/aboutUs/logo.png";
 import AboutUsLogo from "../assets/images/aboutUs/aboutUs.png";
+import PillBar from "../components/PillBar";
+
 
 const ContactItem = ({ icon, text, className }) => (
   <div className={`flex items-center gap-2 font-small ${className}`}>
@@ -92,6 +94,10 @@ const SubscriptionSection = () => (
     <Heading type="subscription" />
     <div className="flex items-center justify-center h-screen bg-gray-200">
       <SubscriptionCard type="subscription" />
+    </div>
+    <div className="flex justify-center -mt-20">
+      <PillBar type="course"/>
+
     </div>
   </div>
 );
