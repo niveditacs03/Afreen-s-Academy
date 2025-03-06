@@ -138,7 +138,7 @@ const DoctorSection = ({ doctorScrollRef }) => (
       <div className="align-left ml-20">
         <Heading type="doctor" />
       </div>
-      <div className="align-right ml-230 mt-40">
+      <div className="align-right ml-230 mt-40 mr-10">
         <TwinButton scrollRef={doctorScrollRef} scrollDistance={300} />
       </div>
     </div>
