@@ -22,7 +22,7 @@ const HEADING_CONFIGS = {
     heading: "HOW TO SUBSCRIBE",
     showDivider: true,
     cardType: "study",
-    className: "text-center py-6 rounded-lg mt-30"
+    className: "text-center py-6 rounded-lg mt-25"
   },
   doctor: {
     title: "OUR TEAM",
@@ -51,12 +51,28 @@ const HEADING_CONFIGS = {
     showDivider: true ,
     cardType: "study",
     className: "text-center py-6 rounded-lg"
+  },
+  aboutUs: {
+    title: "No title",
+    heading:"ONLINE PREPARATORY COURSES FOR",
+    subHeading:"GENERAL PRACTITIONERS / SPECIALISTS / DENTISTS.",
+    showDivider: true,
+    cardType: "study",
+    className: "text-center py-6 rounded-lg mt-10"
+  },
+  practitioner:{
+    title:"NO TITLE",
+    heading:"GENERAL PRACTITIONER STUDY PROGRAMS AT",
+    subHeading:"DR AFREEN’S ACADEMY PROVIDES ACCESS TO",
+    showDivider : true,
+    cardType:"study",
+    className:"text-center py-6 rounded-lg mt-4"
   }
 };
 
 const DividerWithCircle = () => (
   <div style={{ display: "flex", alignItems: "center", width: "25%", margin: "0 auto" }}>
-    <div style={{ flex: 1, height: "1px", backgroundColor: "black" }}></div>
+    <div style={{ flex: 1, height: "1px", backgroundColor: "gray" }}></div>
     <div
       style={{
         width: "20px",
@@ -66,18 +82,19 @@ const DividerWithCircle = () => (
         margin: "0 2px",
       }}
     ></div>
-    <div style={{ flex: 1, height: "1px", backgroundColor: "black" }}></div>
+    <div style={{ flex: 1, height: "1px", backgroundColor: "gray" }}></div>
   </div>
 );
 
 const Heading = ({ type }) => {
-  // Get configuration based on type, with fallback to prevent errors
+  
   const config = HEADING_CONFIGS[type] || HEADING_CONFIGS.study;
   
   return (
     <div className={config.className}>
-      <RoundCard type={config.cardType} title={config.title} />
-      <h1 className="text-4xl font-bold my-6 text-[#333]">{config.heading}</h1>
+     { !(type ==="aboutUs" || type==="practitioner") && <RoundCard type={config.cardType} title={config.title} />}
+      <h1 className="text-5xl font-semibold my-6 text-[#333]">{config.heading}</h1>
+      {(type==="aboutUs" || type==="practitioner") && <h3 className="text-4xl font-normal my-6 text-[#333]">{config.subHeading}</h3>}
       {config.showDivider && <DividerWithCircle />}
     </div>
   );

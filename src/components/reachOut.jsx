@@ -4,7 +4,7 @@ import ConnectIcon from "../assets/icons/connect.png";
 
 const ReachOut = () => {
   return (
-    <div className="relative mt-40 max-w-6xl mx-auto">
+    <div className="relative mt-35 max-w-6xl mx-auto">
       {/* Card with curved corners */}
       <div className="relative z-10 flex items-center justify-between bg-white shadow-lg rounded-3xl p-6 w-full">
         {/* Text Section - Left side */}
