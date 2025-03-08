@@ -42,7 +42,9 @@ const Pillcard = ({ title, content }) => {
         activePill ? "bg-white" : "bg-transparent"
       }`}
     >
-      <div className="flex justify-between items-center">
+      <div
+      onClick={() => setActivePill(!activePill)}
+      className="flex justify-between items-center">
         <p className="font-semibold">{title}</p>
         <button
           onClick={() => setActivePill(!activePill)}

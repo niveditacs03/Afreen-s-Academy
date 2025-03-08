@@ -14,9 +14,9 @@ import callIcon from "../assets/icons/call.png";
 import emailIcon from "../assets/icons/email.png";
 import AcadIcon from "../assets/images/acad.png";
 import LogoIcon from "../assets/images/aboutUs/logo.png";
-import AboutUsLogo from "../assets/images/aboutUs/aboutUs.png";
+import AboutUsLogo from "../assets/images/aboutUs/aboutUsHeading.png";
+import Bar from "../assets/images/aboutUs/aboutUsfooter.png";
 import PillBar from "../components/PillBar";
-
 
 const ContactItem = ({ icon, text, className }) => (
   <div className={`flex items-center gap-2 font-small ${className}`}>
@@ -58,11 +58,14 @@ const NavigationSection = () => (
 const HeroSection = () => (
   <div>
     <div className="flex gap-1 bg-[#E4FFF3] flex-row gap-160">
-      <img
-        src={AboutUsLogo}
-        alt="academyLogo"
-        className="w-[220px] h-[95px] mt-20 ml-30"
-      />
+      <div className="flex flex-col items-center ml-25 mt-20">
+        <p className="text-700 text-black text-5xl font-semibold">About Us</p>
+        <img src={Bar} alt="academyLogo" className="w-[200px] h-[20px]" />
+        <div className="-ml-5">
+          <a href="/" className="text-blue-800">Home /</a>
+          <a href="/about" className="text-blue-800"> About Us</a>
+        </div>
+      </div>
       <img
         src={LogoIcon}
         alt="academyLogo"
@@ -96,8 +99,7 @@ const SubscriptionSection = () => (
       <SubscriptionCard type="subscription" />
     </div>
     <div className="flex justify-center -mt-20">
-      <PillBar type="course"/>
-
+      <PillBar type="course" />
     </div>
   </div>
 );
@@ -121,17 +123,17 @@ const FooterSection = () => (
   </div>
 );
 
-const ProgramSection = () => ( 
-    <div>
-        <ProgramCardSection/>
-    </div>
-)
+const ProgramSection = () => (
+  <div>
+    <ProgramCardSection />
+  </div>
+);
 
-const SpecialistSection = () => ( 
-    <div>
-        <SpecialistCardSection/>
-    </div>
-)
+const SpecialistSection = () => (
+  <div>
+    <SpecialistCardSection />
+  </div>
+);
 const AboutPage = () => {
   return (
     <article>
