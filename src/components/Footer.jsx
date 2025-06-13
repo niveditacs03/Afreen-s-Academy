@@ -13,15 +13,14 @@ import WhatsAppLogo from "../assets/icons/whatsApp.png";
 const FooterBar = () => {
   return (
     <div className="mt-50 relative">
-      {/* The image container */}
+    
       <div className="relative">
         <img src={Footer} alt="footer" className="w-full" />
 
-        {/* Text overlay positioned absolutely within the relative container */}
         <div className="absolute inset-0 flex items-center justify-center w-full">
           <div className="container mx-auto px-4">
             <div className="flex flex-row justify-between text-white">
-              {/* Column 1 */}
+              {/* column 1 */}
               <div className="w-2/5 px-4 mt-10">
                 <img
                   src={Logo}
@@ -56,7 +55,7 @@ const FooterBar = () => {
                 </ul>
               </div>
 
-              {/* Column 2 */}
+              {/* column 2 */}
               <div className="w-1/5 px-4">
                 <h3 className="text-xl font-bold mb-4 mt-20">About us</h3>
                 <div className="h-0.5 bg-gray-400 w-[80px] mt-2 rounded-full"></div> 
@@ -88,7 +87,7 @@ const FooterBar = () => {
                 </ul>
               </div>
 
-              {/* Column 3 */}
+              {/* column 3 */}
               <div className="w-1/5 px-4">
                 <h3 className="text-xl font-bold mb-4 mt-20">Support</h3>
                 <div className="h-0.5 bg-gray-400 w-[80px] mt-2 rounded-full"></div> 
@@ -126,7 +125,7 @@ const FooterBar = () => {
                 </ul>
               </div>
 
-              {/* Column 4 */}
+              {/* column 4 */}
       
               <div className="w-1/5 px-4">
                 <h3 className="text-xl font-bold mb-4 mt-20">Get in touch</h3>

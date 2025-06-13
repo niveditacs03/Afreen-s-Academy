@@ -1,13 +1,13 @@
 import React from "react";
 
-// Images
+// images
 import PillListContainer from "../components/Pillcard";
 import Heading from "../components/Heading";
 import StethImage from "../assets/images/aboutUs/steth.png";
 import girlImage from "../assets/images/aboutUs/girl.png";
 import graduationImage from "../assets/images/aboutUs/graduation.png";
 
-// Icons
+// icons
 import graduateIcon from "../assets/icons/aboutUs/graduate.png";
 
 const ProgramCard = () => {
@@ -28,7 +28,7 @@ const ProgramCard = () => {
             className="w-full h-[190px] rounded-3xl shadow-md ml-1"
           />
 
-          {/* Logo Card */}
+          {/* logo Card */}
           <div className="flex items-center bg-white rounded-3xl border-3 border-[#A0E7C5] shadow-md p-4 w-[270px] h-[100px]">
             <div className="w-[70px] h-[70px] bg-[#A0E7C5] rounded-full flex items-center justify-center mr-4">
               <img
@@ -55,7 +55,7 @@ const ProgramCard = () => {
           />
         </div>
 
-        {/* Right Side: Pill List */}
+        {/* right side-pill list*/}
         <div>
           <PillListContainer />
         </div>

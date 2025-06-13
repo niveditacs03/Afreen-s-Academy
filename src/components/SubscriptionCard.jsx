@@ -1,12 +1,12 @@
 import React from "react";
 import PillBar from "./PillBar";
-import Image from "../assets/images/subscribeImage.jpg"; // Ensure correct file format
+import Image from "../assets/images/subscribeImage.jpg"; 
 import SubscriptionIcon from "../assets/icons/subscription.png";
 
 const SubscriptionCard = () => {
   return (
     <div className="w-[1360px] h-[600px] bg-[#1E616D] rounded-3xl flex items-center justify-between p-6">
-      {/* Left Side - Image */}
+      {/* left image*/}
       <div className="w-1/2 h-full flex items-center justify-center">
         <img
           src={Image}
@@ -15,7 +15,7 @@ const SubscriptionCard = () => {
         />
       </div>
       <div className="w-1/2 h-full flex flex-col justify-center -mt-10">
-        {/* PillBar */}
+
         <PillBar type="subscription" />
 
         

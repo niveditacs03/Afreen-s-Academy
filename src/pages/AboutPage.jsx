@@ -1,4 +1,6 @@
 import React from "react";
+
+//comps
 import RoundCard from "../components/RoundCard";
 import NavBar from "../components/NavBar";
 import Heading from "../components/Heading";
@@ -9,7 +11,7 @@ import SubscriptionCard from "../components/SubscriptionCard";
 import ProgramCardSection from "../components/ProgramCard";
 import SpecialistCardSection from "../components/SpecialistCard";
 
-// Assets
+// assets
 import callIcon from "../assets/icons/call.png";
 import emailIcon from "../assets/icons/email.png";
 import AcadIcon from "../assets/images/acad.png";
@@ -18,6 +20,7 @@ import AboutUsLogo from "../assets/images/aboutUs/aboutUsHeading.png";
 import Bar from "../assets/images/aboutUs/aboutUsfooter.png";
 import PillBar from "../components/PillBar";
 
+//reusable comps
 const ContactItem = ({ icon, text, className }) => (
   <div className={`flex items-center gap-2 font-small ${className}`}>
     <div className="bg-[#dcdcf4] p-1 rounded-full">

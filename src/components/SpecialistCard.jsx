@@ -8,14 +8,14 @@ const SpecialistCardSection = () => {
     <div className="flex justify-center items-center min-h-screen">
       <div className="bg-[#FB9F9E] py-10 px-6 h-[550px] w-[1300px] flex justify-center items-center rounded-3xl">
         <div className="bg-white py-10 px-6 h-[510px] w-[1250px] flex justify-between items-center rounded-3xl gap-x-10">
-          {/* Left: Image */}
+          {/* lefy-image */}
           <img
             src={specialistImage}
             alt="specialist"
             className="w-[595px] h-[400px] object-cover rounded-lg"
           />
 
-          {/* Right: Text Section */}
+          {/* right*/}
           <div className="flex flex-col items-center text-center w-[600px]">
             <h1 className="text-5xl font-semibold text-black leading-tight">
               SPECIALIST & DENTAL <br /> GP EXAMS

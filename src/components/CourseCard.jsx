@@ -37,9 +37,9 @@ const CourseCard = () => {
 
   return (
     <div className="w-full max-w-[85rem] mx-auto px-8 py-3">
-      {/* Course Container */}
+      {/* course */}
       <div className="flex flex-col md:flex-row gap-10 rounded-full">
-        {/* Left side - Image Card */}
+        {/* left-image */}
         <div className="bg-white rounded-lg overflow-hidden shadow-lg p-2 w-[35%] rounded-full">
           <img
             src={activeCourse.image}
@@ -48,9 +48,9 @@ const CourseCard = () => {
           />
         </div>
 
-        {/* Right side - Tabs and Content */}
+        {/* right-tabs */}
         <div className="md:w-3/5">
-          {/* Tabs Navigation */}
+          {/* tab nav */}
           <div className="flex gap-0.5 w-full">
             {courses.map((course) => (
               <button
@@ -67,7 +67,7 @@ const CourseCard = () => {
             ))}
           </div>
 
-          {/* Course Content */}
+          {/* course */}
           <div className="bg-transparent p-6 rounded-lg">
             <h3 className="text-[28px] text-black font-normal">
               {activeCourse.subTitle}

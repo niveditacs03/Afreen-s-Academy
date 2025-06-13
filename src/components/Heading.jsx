@@ -1,7 +1,7 @@
 import React from "react";
 import RoundCard from "./RoundCard";
 
-// Configuration object for different heading types
+
 const HEADING_CONFIGS = {
   study: {
     title: "STUDY PROGRAMS",

@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 
-// Components
+// components
 import Card from "../components/Card";
 import RoundCard from "../components/RoundCard";
 import NavBar from "../components/NavBar";
@@ -15,7 +15,7 @@ import PlanCards from "../components/PlanCard";
 import ReviewCard from "../components/ReviewCard";
 import ReachOut from "../components/reachOut";
 import FooterBar from "../components/Footer";
-// Assets
+// assets
 import callIcon from "../assets/icons/call.png";
 import emailIcon from "../assets/icons/email.png";
 import AcadIcon from "../assets/images/acad.png";
@@ -23,7 +23,7 @@ import HeaderIcon from "../assets/images/headerImage.png";
 import BackgroundImage from "../assets/images/background.jpg";
 import CouponIcon from "../assets/icons/coupon.png";
 
-// Reusable components
+//reusable comps
 const ContactItem = ({ icon, text, className }) => (
   <div className={`flex items-center gap-2 font-small ${className}`}>
     <div className="bg-[#dcdcf4] p-1 rounded-full">
@@ -102,7 +102,7 @@ const CardScrollSection = ({ scrollRef }) => (
       className="flex gap-6 overflow-x-auto w-full max-w-screen-xl px-4 scrollbar-hide"
       style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
     >
-      {/* Use map to render multiple cards */}
+     
       {Array.from({ length: 10 }, (_, index) => (
         <Card
           key={index}
@@ -207,7 +207,7 @@ const FooterSection = () => (
     <FooterBar />
   </div>
 );
-// Main component
+// main
 const HomePage = () => {
   const coursesScrollRef = useRef(null);
   const doctorScrollRef = useRef(null);

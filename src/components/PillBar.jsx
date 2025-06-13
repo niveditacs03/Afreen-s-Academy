@@ -1,6 +1,6 @@
 import React from "react";
 
-// Icon imports
+// icon 
 import teachIcon from "../assets/icons/teach.png";
 import GrauateIcon from "../assets/icons/classesCompleted.png";
 import ReviewIcon from "../assets/icons/review.png";
@@ -9,7 +9,7 @@ import SubscriptionIcon from "../assets/icons/subscription.png";
 import EmailIcon from "../assets/icons/email.png";
 import MaterialsIcon from "../assets/icons/easy-access.png";
 
-// Data configurations
+//data
 const STATS = [
   { id: 1, value: "425", label: "Total Classroom", icon: "classroom" },
   { id: 2, value: "25K +", label: "Classes Completed", icon: "classes" },
@@ -38,7 +38,6 @@ const SUBSCRIBE_STEPS = [
   },
 ];
 
-// Icon mapping object
 const ICON_SOURCES = {
   classroom: { src: teachIcon, alt: "Teach" },
   classes: { src: GrauateIcon, alt: "Graduate" },
@@ -49,7 +48,7 @@ const ICON_SOURCES = {
   materials: { src: MaterialsIcon, alt: "Materials" },
 };
 
-// Reusable components
+// reusable comps
 const Icon = ({ type }) => {
   const iconConfig = ICON_SOURCES[type] || ICON_SOURCES.classroom;
   return <img src={iconConfig.src} alt={iconConfig.alt} className="w-8 h-8" />;
@@ -81,7 +80,6 @@ const SubscriptionStep = ({ title, description, icon }) => (
   </div>
 );
 
-// Component-specific containers
 const CourseStats = () => (
   <div className="w-[950px] h-full px-4 py-6 mt-6">
     <div className="relative max-w-6xl mx-auto">

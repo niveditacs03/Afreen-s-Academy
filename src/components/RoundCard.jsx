@@ -11,7 +11,6 @@ const RoundCard = (RoundCard) => {
       <div className="bg-[#20dcdc] text-white w-25 h-10 flex items-center justify-center rounded-full hover:bg-[#20c5c5] transition cursor-pointer">
         <PersonIcon className="w-4 h-4" />
         <span className="text-xs font-medium ml-1">{RoundCard.title}</span>{" "}
-        {/* Small text */}
       </div>
     );
   }

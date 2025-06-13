@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
-import rightArrow from "../assets/icons/rightArrow.png"; // Import the arrow icon too
+import rightArrow from "../assets/icons/rightArrow.png"; 
 
 const Card = ({ image, title, content, type }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,13 +14,10 @@ const Card = ({ image, title, content, type }) => {
       />
 
       <h1 className="text-xl font-bold mt-3">{title}</h1>
-
-      {/* Green Line */}
       <div className="w-20 h-1 bg-green-400 mt-1 rounded-full"></div>
 
       <p className="text-gray-600 text-sm mt-2">{content}</p>
-
-      {/* Button only appears for non-doctor cards */}
+      {/* button for non doctors */}
       {type !== "doctor" && (
         <div className="flex justify-end mt-4">
           {isOpen ? (
